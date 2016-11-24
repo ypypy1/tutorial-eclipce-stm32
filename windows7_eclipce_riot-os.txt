@@ -1,0 +1,27 @@
+0. original https://github.com/RIOT-OS/RIOT/wiki/Using-the-Eclipse-IDE-for-C-and-CPP-Developers,-Howto
+	- win7 x64 
+1. install latest eclipce neon 
+2. install latest arm gcc none eabi https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads
+3. git clone riot https://github.com/RIOT-OS/RIOT.git to eclipce workspase (without any unconv symbols in folder name )
+4. Create a new Makefile projec workspace/new-folder/projectfolder it helps with the "Create a new Makefile project". https://www.youtube.com/watch?v=l_Ef8yVHjvc
+
+5. install gnu arm eclipse plug-in http://gnuarmeclipse.sourceforge.net/updates
+6. after autorestarting eclipse  tolchain bin-directory should be automatic pick-up to config ( see builder->settings)
+		[3. Preparing ARM cross compilation - 2.Setting up the the ARM cross toolchain]
+7. apply 4. Setup our environment 
+8. 5. Setting up paths and symbols for the project
+	create a configuration .xml file for eclipse in project directory
+	https://www.tutorialspoint.com/eclipse/eclipse_create_xml_file.htm
+	
+	
+	
+9. after pc reboot eclipse don't start correctly
+		http://stackoverflow.com/questions/15372023/eclipse-will-not-start-and-i-havent-changed-anything
+		
+10. For external project you must link RIOT root folder C/C++ General / Parts and Symbols
+RIOTCPU        ?= $(DEVELOPBASE)/cpu
+RIOTBOARD      ?= $(DEVELOPBASE)/boards
+
+11 Without MinGw should Cygwin curl and 7z
+
+12 http://gnuarmeclipse.github.io/plugins/packs-manager/ pack register
